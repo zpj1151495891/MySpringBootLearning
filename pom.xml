@@ -9,17 +9,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>SpringBootLearning</module>
+        <module>SpringBootLearning/2.1.x/chapter3-4</module>
+        <module>SpringBootLearning/2.1.x/chapter5-1</module>
+        <module>SpringBootLearning/2.x/chapter2-8</module>
+        <module>SpringBootLearning/2.x/chapter4-3</module>
     </modules>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 
 </project>
