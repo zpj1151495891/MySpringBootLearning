@@ -1,0 +1,10 @@
+file:
+    upload:
+        path: E:\测试\
+spring:
+    jackson:
+        locale: zh_CN
+    servlet:
+        multipart:
+            max-file-size: 500MB
+            max-request-size: 500MB

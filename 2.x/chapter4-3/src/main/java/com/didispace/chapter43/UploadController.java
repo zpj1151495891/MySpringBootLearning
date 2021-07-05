@@ -29,11 +29,26 @@ public class UploadController {
     @ResponseBody
     public String create(@RequestPart MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
+
+        log.info(path);
+
         String filePath = path + fileName;
 
         File dest = new File(filePath);
         Files.copy(file.getInputStream(), dest.toPath());
         return "Upload file success : " + dest.getAbsolutePath();
+    }
+
+    @PostMapping("/upload2")
+    @ResponseBody
+    public String create2(@RequestPart MultipartFile file) throws IOException {
+        String fileName = file.getOriginalFilename();
+        String filePath = path + fileName;
+
+        File dest = new File(filePath);
+        file.transferTo(dest);
+        return "Upload file success : " + dest.getAbsolutePath();
+
     }
 
 }
